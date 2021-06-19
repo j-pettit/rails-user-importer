@@ -1,24 +1,11 @@
-# README
+# rails-user-importer
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Simple rails app that supports user import from a CSV file and display of the imported users.
 
-Things you may want to cover:
+CSV files should have the format:
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```
+first_name,last_name,email
+John,Smith,john_smith@email.com
+Jane,Smith,jane_smith@email.com
+```

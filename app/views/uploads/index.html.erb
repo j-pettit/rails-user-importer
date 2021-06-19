@@ -1,0 +1,30 @@
+<h1>User Uploads</h1>
+
+<table>
+  <tr>
+    <th>first_name</th>
+    <th>last_name</th>
+    <th>email</th>
+  </tr>
+  <% @uploads.each do |upload| %>
+    <tr>
+      <td>
+        <%= upload.first_name %>
+      </td>
+      <td>
+        <%= upload.last_name %>
+      </td>
+      <td>
+        <%= upload.email %>
+      </td>
+    </tr>
+  <% end %>
+</table>
+
+<div>
+  <h2>Import User Data</h2>
+  <%= form_tag import_uploads_path, multipart:true do %>
+    <%= file_field_tag :file %>
+    <%= submit_tag "Import CSV" %>
+  <% end %>
+</div>
